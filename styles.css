@@ -1,0 +1,101 @@
+* {
+    color: rgb(195, 195, 195);
+    scroll-snap-type: y mandatory;
+    margin: 0;
+    padding: 0;
+    font-size: calc(15px + 0.390625vw);
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}    
+
+html {
+
+html::-webkit-scrollbar { /* Chromium */
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track { /* Chromium */
+    background: rgba(35,0,36,1);
+    box-shadow: inset 1px 1px 5px black ;
+}
+
+html::-webkit-scrollbar-thumb { /* Chromium */
+    background: linear-gradient(0deg, rgba(253 187 45,1), rgb(34 193 195));
+    border-radius: 10px;
+}
+
+    background: rgb(35, 0, 36);
+    text-shadow: 2px 2px 5px black;
+    scrollbar-color: rgba(78,110,57,1) rgba(35,0,36,1) 100%; /* Gecko */
+    scrollbar-width: thin; /* Gecko */
+}
+html::-webkit-scrollbar-thumb:hover { /* Chromium */
+    background: linear-gradient(0deg, rgba(253 187 45,1), rgb(34 193 195));
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:active { /* Chromium */
+    background: linear-gradient(0deg, rgba(253 187 45,1), rgb(34 193 195));
+    border-radius: 10px;
+}
+
+section {
+    height: 100vh;
+    background: radial-gradient(circle, rgb(253 187 45) 0%, rgb(34 193 195) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 3;
+    scroll-snap-align: start;
+    overflow: auto;
+}
+
+.page {
+    width: 80%;
+}
+
+section img {
+    width: 250px;
+    height: 250px;
+    margin-top: 25px;
+}
+
+section p img {
+    width: 48px;
+    height: 48px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+a {
+    color: rgb(0, 127, 99);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(43, 154, 164);
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'greater_foundation', fantasy;
+    line-height: 1.5;
+}
+
+h2 {
+    color: rgb(0, 127, 99);
+    font-family: 'greater_foundation', fantasy;
+    font-size: calc(76px + 0.390625vw);
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+@font-face {
+    font-family: 'greater_foundation';
+    src: url('font/greater_foundation.otf');
+    font-style: normal;
+}
