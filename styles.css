@@ -54,7 +54,7 @@ section {
 }
 
 section img::before {
-    height: 5%; /* adjust this value based on your image's height */
+    height: 50%; /* adjust this value based on your image's height */
     filter: blur(50px); /* adjust this value for the desired blur effect */
 }
 
