@@ -78,11 +78,11 @@ a:hover {
 }
 
 h1 {
-    color: #5A4016;
+    color: #B1B72E;
     font-size: 4rem;
     font-family: 'greater_foundation', fantasy;
     line-height: 1.5;
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 2px 2px 5px black;
 }
 
 h2 {
