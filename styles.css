@@ -57,9 +57,7 @@ section img {
     width: 350px;
     height: 200px;
     margin-top: 25px;
-    border-radius: border-radius: 0px 100px 100px 100px;
-    -webkit-border-radius: 0px 100px 100px 100px;
-    -moz-border-radius: 0px 100px 100px 100px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
 section p img {
