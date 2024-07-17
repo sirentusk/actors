@@ -22,9 +22,6 @@ html::-webkit-scrollbar-track { /* Chromium */
 html::-webkit-scrollbar-thumb { /* Chromium */
     background: linear-gradient(0deg, rgba(253 187 45,1), rgb(34 193 195));
     border-radius: 10px;
-}
-
-    background: rgb(35, 0, 36);
     text-shadow: 2px 2px 5px black;
     scrollbar-color: rgba(78,110,57,1) rgba(35,0,36,1) 100%; /* Gecko */
     scrollbar-width: thin; /* Gecko */
@@ -87,7 +84,7 @@ h1 {
 }
 
 h2 {
-    color: rgb(0, 127, 99);
+    color: #901010;
     font-family: 'greater_foundation', fantasy;
     font-size: calc(76px + 0.390625vw);
     overflow: hidden;
