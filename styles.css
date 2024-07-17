@@ -41,7 +41,7 @@ html::-webkit-scrollbar-thumb:active { /* Chromium */
 
 section {
     height: 100vh;
-    background: radial-gradient(circle, rgb(253 187 45) 0%, rgb(34 193 195) 100%);
+    background-image: radial-gradient(circle, #b1b72e, #b39a0e, #b27d00, #ac6000, #a34202, #983905, #8c3006, #812807, #763105, #6c3808, #633d0e, #5a4016);
     min-height: 100vh;
     display: flex;
     justify-content: center;
