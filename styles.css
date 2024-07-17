@@ -82,13 +82,14 @@ h1 {
     font-size: 4rem;
     font-family: 'greater_foundation', fantasy;
     line-height: 1.5;
+    text-shadow: 2px 2px 5px white;
 }
 
 h2 {
     color: #901010;
     font-family: 'greater_foundation', fantasy;
     border-radius: 10px;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px white;
     font-size: calc(76px + 0.390625vw);
     overflow: hidden;
     line-height: 1.5;
