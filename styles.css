@@ -57,7 +57,7 @@ section img {
     width: 350px;
     height: 200px;
     margin-top: 25px;
-    border-radius: 5px 20px 5px;
+    border-radius: 49% 51% 25% 25% / 25% 25% 25% 25%;
 }
 
 section p img {
