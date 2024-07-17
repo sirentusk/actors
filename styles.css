@@ -63,6 +63,7 @@ section img {
     height: 200px;
     margin-top: 25px;
     border-radius: 5px 5px 50px 50px;
+    position: relative;
 }
 
 section p img {
