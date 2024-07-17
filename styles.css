@@ -58,7 +58,7 @@ section img {
     height: 200px;
     margin-top: 25px;
     border-radius: 5px 5px 50px 50px;
-    filter: blur(200px);
+    filter: blur(50px);
 }
 
 section p img {
