@@ -1,5 +1,4 @@
 * {
-    color: #901010;
     scroll-snap-type: y mandatory;
     margin: 0;
     padding: 0;
@@ -71,7 +70,7 @@ section p img {
 }
 
 a {
-    color: rgb(0, 127, 99);
+    color: #901010;
     text-decoration: none;
 }
 
