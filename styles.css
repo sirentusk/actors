@@ -53,12 +53,12 @@ section {
     width: 80%;
 }
 
-section img {
+section > .page > img {
+    border-top: none; /* Or whatever you prefer */
+    margin-top: 25px;
     width: 350px;
     height: 200px;
-    margin-top: 25px;
     border-radius: 5px 5px 50px 50px;
-    border-top: 1px solid #000;
 }
 
 section p img {
@@ -82,14 +82,14 @@ a:hover {
 h1 {
     color: #b39a0e;
     font-size: 4rem;
-    font-family: 'greater_foundation', fantasy;
+    font-family: 'GarudaFight', fantasy;
     line-height: 1.5;
     text-shadow: 2px 2px 5px black;
 }
 
 h2 {
     color: #5a4016;
-    font-family: 'greater_foundation', fantasy;
+    font-family: 'GarudaFight', fantasy;
     border-radius: 10px;
     text-shadow: 2px 2px 5px white;
     font-size: calc(76px + 0.390625vw);
@@ -98,7 +98,7 @@ h2 {
 }
 
 @font-face {
-    font-family: 'greater_foundation';
-    src: url('font/greater_foundation.otf');
+    font-family: 'GarudaFight';
+    src: url('font/GarudaFight.otf');
     font-style: normal;
 }
