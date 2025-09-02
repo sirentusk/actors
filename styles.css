@@ -9,7 +9,6 @@
 }
 
 html {
-    /* Ensure scroll-snap-type is applied correctly */
     scroll-behavior: smooth;
 }
 
@@ -56,7 +55,7 @@ section {
 }
 
 section > .page > img {
-    border: none; /* Remove any border from thumbnails */
+    border: none;
     margin-top: 25px;
     width: 350px;
     height: 200px;
@@ -69,7 +68,7 @@ section p img {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 20px;
-    border: none; /* Remove border from icons (IMDb, TMDB, Wikipedia) */
+    border: none;
 }
 
 a {
@@ -85,14 +84,14 @@ a:hover {
 h1 {
     color: #b39a0e;
     font-size: 4rem;
-    font-family: 'GarudaFight', fantasy; /* Ensure GarudaFight for h1 */
+    font-family: 'GarudaFight', fantasy !important; /* Force GarudaFight */
     line-height: 1.5;
     text-shadow: 2px 2px 5px black;
 }
 
 h2 {
     color: #5a4016;
-    font-family: 'GarudaFight', fantasy; /* Ensure GarudaFight for h2 */
+    font-family: 'GarudaFight', fantasy !important; /* Force GarudaFight */
     border-radius: 10px;
     text-shadow: 2px 2px 5px white;
     font-size: calc(76px + 0.390625vw);
@@ -101,6 +100,11 @@ h2 {
 
 @font-face {
     font-family: 'GarudaFight';
-    src: url('font/GarudaFight.otf');
+    src: url('font/GarudaFight.otf') format('opentype'),
+         url('font/garudafight.otf') format('opentype'), /* Fallback for case sensitivity */
+         url('fonts/GarudaFight.otf') format('opentype'), /* Fallback for common folder name */
+         url('fonts/garudafight.otf') format('opentype'); /* Fallback for case and folder */
+    font-weight: normal;
     font-style: normal;
+    font-display: swap; /* Improve loading behavior */
 }
