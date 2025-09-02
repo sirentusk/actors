@@ -6,33 +6,35 @@
     font-size: calc(15px + 0.390625vw);
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}    
+}
 
 html {
+    /* Ensure scroll-snap-type is applied correctly */
+    scroll-behavior: smooth;
+}
 
 html::-webkit-scrollbar { /* Chromium */
     width: 10px;
 }
 
 html::-webkit-scrollbar-track { /* Chromium */
-    background: rgba(35,0,36,1);
-    box-shadow: inset 1px 1px 5px black ;
+    background: rgba(35, 0, 36, 1);
+    box-shadow: inset 1px 1px 5px black;
 }
 
 html::-webkit-scrollbar-thumb { /* Chromium */
-    background: linear-gradient(0deg, rgba(253 187 45,1), rgb(34 193 195));
+    background: linear-gradient(0deg, rgba(253, 187, 45, 1), rgb(34, 193, 195));
     border-radius: 10px;
     text-shadow: 2px 2px 5px black;
-    scrollbar-color: rgba(78,110,57,1) rgba(35,0,36,1) 100%; /* Gecko */
-    scrollbar-width: thin; /* Gecko */
 }
+
 html::-webkit-scrollbar-thumb:hover { /* Chromium */
-    background: linear-gradient(0deg, rgba(253 187 45,1), rgb(34 193 195));
+    background: linear-gradient(0deg, rgba(253, 187, 45, 1), rgb(34, 193, 195));
     border-radius: 10px;
 }
 
 html::-webkit-scrollbar-thumb:active { /* Chromium */
-    background: linear-gradient(0deg, rgba(253 187 45,1), rgb(34 193 195));
+    background: linear-gradient(0deg, rgba(253, 187, 45, 1), rgb(34, 193, 195));
     border-radius: 10px;
 }
 
@@ -54,7 +56,7 @@ section {
 }
 
 section > .page > img {
-    border-top: none; /* Or whatever you prefer */
+    border: none; /* Remove any border from thumbnails */
     margin-top: 25px;
     width: 350px;
     height: 200px;
@@ -67,6 +69,7 @@ section p img {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 20px;
+    border: none; /* Remove border from icons (IMDb, TMDB, Wikipedia) */
 }
 
 a {
@@ -82,18 +85,17 @@ a:hover {
 h1 {
     color: #b39a0e;
     font-size: 4rem;
-    font-family: 'GarudaFight', fantasy;
+    font-family: 'GarudaFight', fantasy; /* Ensure GarudaFight for h1 */
     line-height: 1.5;
     text-shadow: 2px 2px 5px black;
 }
 
 h2 {
     color: #5a4016;
-    font-family: 'GarudaFight', fantasy;
+    font-family: 'GarudaFight', fantasy; /* Ensure GarudaFight for h2 */
     border-radius: 10px;
     text-shadow: 2px 2px 5px white;
     font-size: calc(76px + 0.390625vw);
-    overflow: hidden;
     line-height: 1.5;
 }
 
