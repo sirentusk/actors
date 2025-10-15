@@ -86,28 +86,28 @@ section p img {
 }
 
 a {
-    color: rgb(115, 190, 184);
+    color: rgb(255, 215, 0);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgb(147, 112, 219);
+    color: rgb(218, 165, 32);
     cursor: pointer;
 }
 
 h1 {
-    color: rgb(255, 210, 53);
+    color: rgb(75, 0, 130);
     font-size: 4rem;
     font-family: 'GarudaFight', fantasy !important; /* Force GarudaFight */
     line-height: 1.5;
-    text-shadow: 2px 2px 5px black, 0 0 10px rgb(255, 210, 53);
+    text-shadow: 2px 2px 5px black, 0 0 10px rgb(75, 0, 130);
 }
 
 h2 {
-    color: rgb(255, 210, 53);
+    color: rgb(75, 0, 130);
     font-family: 'GarudaFight', fantasy !important; /* Force GarudaFight */
     border-radius: 10px;
-    text-shadow: 2px 2px 5px white, 0 0 10px rgb(255, 210, 53);
+    text-shadow: 2px 2px 5px white, 0 0 10px rgb(75, 0, 130);
     font-size: calc(76px + 0.390625vw);
     line-height: 1.5;
 }
