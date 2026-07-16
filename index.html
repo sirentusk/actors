@@ -3,551 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favourite Actors | Megan Judge</title>
-    <meta property="og:title" content="Favourite Actors | Megan Judge">
-    <meta property="twitter:title" content="Favourite Actors | Megan Judge">
-    <meta property="og:site_name" content="Favourite Actors | Megan Judge">
-    <meta property="og:description" content="Megan Judge's Favourite Actors. Actors that, if are in a show, I am more likely to watch it. My choices are unreflective of their personal lives - as I don't generally know anything about them.">
-    <meta property="og:image" content="https://actors.jdge.cc/images/actors_logo.png">
-    <meta property="og:url" content="https://actors.jdge.cc">
-    <meta property="og:type" content="website">
+    <title>Favourite Series | Megan Judge</title>
+    <meta property="og:title" content="Favourite Series | Megan Judge">
+    <meta property="twitter:title" content="Favourite Series | Megan Judge">
+    <meta property="og:site_name" content="Favourite Series | Megan Judge">
+    <meta property="og:description" content="Megan Judge's Favourite Video Series.">
+    <meta property="og:image" content="https://series.jdge.cc/images/series_logo.png">
+    <meta property="og:url" content="https://series.jdge.cc/">
     <meta property="og:locale" content="en_AU">
-    <meta name="theme-color" content="#b1b72e">
+    <meta property="og:type" content="website">
     <meta name="author" content="Megan Judge">
     <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/png" href="https://actors.jdge.cc/images/actors_logo.png">
-    <link rel="alternate" href="https://actors.jdge.cc/" hreflang="en">
-    <link rel="canonical" href="https://actors.jdge.cc/">
+    <meta name="theme-color" content="#ff9329">
+    <link rel="icon" type="image/png" href="https://series.jdge.cc/images/series_logo.png">
+    <link rel="alternate" href="https://series.jdge.cc/" hreflang="en">
+    <link rel="canonical" href="https://series.jdge.cc/">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <main>
-        <section>
-            <div class="page">
-                <h1>Megan Judge's Favourite Actors</h1>
+    <div class="app-shell">
+    <header class="app-header">
+        <div class="intro">
+            <h1>Megan Judge's Favourite Series</h1>
+        </div>
+
+        <nav class="view-tabs" aria-label="View">
+            <button type="button" id="filtersTab" class="view-tab" aria-expanded="false" aria-controls="filterPanel">Filters</button>
+        </nav>
+
+        <section id="filterPanel" class="filter-bar" aria-label="Filter series" hidden>
+            <div class="dropdown-container">
+                <label class="sr-only" for="genreDropdown">Filter by genre</label>
+                <select id="genreDropdown">
+                    <option value="">All Genres</option>
+                </select>
+                <label class="sr-only" for="countryDropdown">Filter by country</label>
+                <select id="countryDropdown">
+                    <option value="">All Countries</option>
+                </select>
+                <label class="sr-only" for="yearDropdown">Filter by year</label>
+                <select id="yearDropdown">
+                    <option value="">All Years</option>
+                </select>
             </div>
+            <div id="genreDescription" class="description"></div>
         </section>
-        <section>
-            <div class="page">
-                <h2>James Spader</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0000652/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/9273-james-spader"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/James_Spader"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0402711/">Boston Legal</a>, <a href="https://www.imdb.com/title/tt0111282/">Stargate</a></p>
-                <img src="/images/JamesSpader.jpg" alt="James Spader">
+    </header>
+
+    <main class="app-content">
+        <section class="grid-section" aria-label="Series grid">
+            <div id="seriesGrid" class="series-grid">
             </div>
+            <p id="noResults" class="empty-state" hidden>No series found for this filter.</p>
         </section>
-        <section>
-            <div class="page">
-                <h2>Catherine Zeta-Jones</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0001876/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/2632-catherine-zeta-jones"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Catherine_Zeta-Jones"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0138524/">Intolerable Cruelty</a>, <a href="https://www.imdb.com/title/tt0120746/">The Mask of Zorro</a></p>
-                <img src="/images/CatherineZetaJones.jpg" alt="Catherine Zeta-Jones">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Johnny Depp</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0000136/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/85-johnny-depp"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Johnny_Depp"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0363988/">Secret Window</a>, <a href="https://www.imdb.com/title/tt0120669/">Fear and Loathing in Las Vegas</a></p>
-                <img src="/images/JohnnyDepp.jpg" alt="Johnny Depp">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Salma Hayek</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0000161/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/1231-salma-hayek"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Salma_Hayek"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0285823/">Once Upon a Time in Mexico</a>, <a href="https://www.imdb.com/title/tt0120655/">Dogma</a></p>
-                <img src="/images/SalmaHayek.jpg" alt="Salma Hayek">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Jason Statham</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0005458/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/976-jason-statham"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Jason_Statham"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0365686/">Revolver</a>, <a href="https://www.imdb.com/title/tt0208092/">Snatch</a></p>
-                <img src="/images/JasonStatham.jpg" alt="Jason Statham">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Anna Paquin</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0001593/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/10690-anna-paquin"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Anna_Paquin"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0844441/">True Blood</a>, <a href="https://www.imdb.com/find/?q=x-men">X-Men series</a></p>
-                <img src="/images/AnnaPaquin.jpg" alt="Anna Paquin">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Jared Leto</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0001467/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/170-jared-leto"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Jared_Leto"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0187078/">Requiem for a Dream</a>, <a href="https://www.imdb.com/title/tt0399295/">Lord of War</a>, (also <a href="https://www.youtube.com/watch?v=8yvGCAvOAfM">Thirty Seconds To Mars</a>)</p>
-                <img src="/images/JaredLeto.jpg" alt="Jared Leto">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Natasha Lyonne</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0005169/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/3896-natasha-lyonne"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Natasha_Lyonne"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt7520794/">Russian Doll</a>, <a href="https://www.imdb.com/title/tt14269590/">Poker Face</a></p>
-                <img src="/images/NatashaLyonne.jpg" alt="Natasha Lyonne">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Edward Norton</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0001570/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/819-edward-norton"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Edward_Norton"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0137523/">Fight Club</a>, <a href="https://www.imdb.com/title/tt0443543/">The Illusionist</a></p>
-                <img src="/images/EdwardNorton.jpg" alt="Edward Norton">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Hayden Panettiere</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0659363/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/17265-hayden-panettiere"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Hayden_Panettiere"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0813715/">Heroes</a></p>
-                <img src="/images/HaydenPanettiere.jpg" alt="Hayden Panettiere">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Iain Glen</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0322513/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/20508-iain-glen"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Iain_Glen"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt6954652/">Jack Taylor</a></p>
-                <img src="/images/IainGlen.jpg" alt="Iain Glen">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Vin Diesel</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0004874/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/12835-vin-diesel"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Vin_Diesel"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0296572/">The Chronicles of Riddick</a>, <a href="https://www.imdb.com/title/tt0295701/">xXx</a></p>
-                <img src="/images/VinDiesel.jpg" alt="Vin Diesel">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Milla Jovovich</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0000170/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/63-milla-jovovich"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Milla_Jovovich"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/find/?q=resident%20evil">Resident Evil series</a></p>
-                <img src="/images/MillaJovovich.jpg" alt="Milla Jovovich">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Kevin Spacey</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0000228/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/1100-kevin-spacey"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Kevin_Spacey"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0169547/">American Beauty</a>, <a href="https://www.imdb.com/title/tt0114369/">Seven</a></p>
-                <img src="/images/KevinSpacey.jpg" alt="Kevin Spacey">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Michelle Rodriguez</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0735442/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/5527-michelle-rodriguez"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Michelle_Rodriguez"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0232500/">The Fast and the Furious</a>, <a href="https://www.imdb.com/find/?q=resident%20evil">Resident Evil series</a></p>
-                <img src="/images/MichelleRodriguez.jpg" alt="Michelle Rodriguez">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Hugo Weaving</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0915989/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/509-hugo-weaving"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Hugo_Weaving"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0434409/">V for Vendetta</a>, <a href="https://www.imdb.com/title/tt0242653/">Matrix Revolutions</a></p>
-                <img src="/images/HugoWeaving.jpg" alt="Hugo Weaving">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Eva Mendes</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0578949/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/8170-eva-mendes"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Eva_Mendes"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0259324/">Ghost Rider</a>, <a href="https://www.imdb.com/title/tt0285823/">Once Upon a Time in Mexico</a></p>
-                <img src="/images/EvaMendes.jpg" alt="Eva Mendes">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Robert Downey Jr.</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0000375/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/3223-robert-downey-jr"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Robert_Downey_Jr."><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0443706/">Zodiac</a>, <a href="https://www.imdb.com/title/tt15398776/">Oppenheimer</a></p>
-                <img src="/images/RobertDowneyJr.jpg" alt="Robert Downey Jr.">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Fiona Dourif</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm1875040/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/121986-fiona-dourif"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Fiona_Dourif"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt4047038/">Dirk Gently's Holistic Detective Agency</a></p>
-                <img src="/images/FionaDourif.jpg" alt="Fiona Dourif">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Richard Roxburgh</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0746896/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/7908-richard-roxburgh"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Richard_Roxburgh"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt1587000/">Rake</a>, <a href="https://www.imdb.com/title/tt0338526/">Van Helsing</a></p>
-                <img src="/images/RichardRoxburgh.jpg" alt="Richard Roxburgh">
-            </div>
-        </section>
-        
-        <section>
-            <div class="page">
-                <h2>Aidan Gallagher</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm6200897/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/1394116-aidan-gallagher"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Aidan_Gallagher"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt1312171/">Umbrella Academy</a></p>
-                <img src="/images/AidanGallagher.jpg" alt="Aidan Gallagher">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Robert Sheehan</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm1588066/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/228126-robert-sheehan"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Robert_Sheehan"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt1548850/">Misfits</a>, <a href="https://www.imdb.com/title/tt1312171/">Umbrella Academy</a></p>
-                <img src="/images/RobertSheehan.jpg" alt="Robert Sheehan">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Ian McShane</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0574534/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/16577-ian-mcshane"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Ian_McShane"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0348914/">Deadwood</a>, <a href="https://www.imdb.com/find/?q=pirates%20of%20the%20carribean">Pirates of the Caribbean series</a></p>
-                <img src="/images/IanMcShane.jpg" alt="Ian McShane">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Kate Beckinsale</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0000295/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/5679-kate-beckinsale"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Kate_Beckinsale"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/find/?q=underworld">Underworld series</a>, <a href="https://www.imdb.com/title/tt0338526/">Van Helsing</a></p>
-                <img src="/images/KateBeckinsale.jpg" alt="Kate Beckinsale">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Stuart Townsend</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0870204/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/11280-stuart-townsend"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Stuart_Townsend"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0238546/">Queen of the Damned</a>, <a href="https://www.imdb.com/title/tt0311429/">The League of Extraordinary Gentlemen</a></p>
-                <img src="/images/StuartTownsend.jpg" alt="Stuart Townsend">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>John Noble</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0633604/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/18029-john-noble"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/John_Noble"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt1119644/">Fringe</a></p>
-                <img src="/images/JohnNoble.jpg" alt="John Noble">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Jamie Campbell Bower</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm2570429/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/55085-jamie-campbell-bower"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Jamie_Campbell_Bower"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt1538403/">The Mortal Instruments: City of Bones</a></p>
-                <img src="/images/JamieCampbellBower.jpg" alt="Jamie Campbell Bower">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Vincent D'Onofrio</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0000352/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/5293-vincent-d-onofrio"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Vincent_D%27Onofrio"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0275140/">Law & Order: Criminal Intent</a></p>
-                <img src="/images/VincentDOnofrio.jpg" alt="Vincent D'Onofrio">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Theo James</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm3772243/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/110100-theo-james"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Theo_James"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt13210838/">The Gentlemen</a>, <a href="https://www.imdb.com/find/?q=underworld">Underworld series</a></p>
-                <img src="/images/TheoJames.jpg" alt="Theo James">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>David Suchet</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0837064/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/3126-david-suchet"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/David_Suchet"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0094525/">Poirot</a></p>
-                <img src="/images/DavidSuchet.jpg" alt="David Suchet">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Vinnie Jones</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0005068/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/10882-vinnie-jones"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Vinnie_Jones"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0208092/">Snatch</a>, <a href="https://www.imdb.com/title/tt0120735/">Lock, Stock and Two Smoking Barrels</a></p>
-                <img src="/images/VinnieJones.jpg" alt="Vinnie Jones">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Hugh Jackman</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0413168/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/6968-hugh-jackman"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Hugh_Jackman"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0244244/">Swordfish</a>, <a href="https://www.imdb.com/title/tt0120903/">X-Men</a></p>
-                <img src="/images/HughJackman.jpg" alt="Hugh Jackman">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>John Nettles</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0626719/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/123770-john-nettles"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/John_Nettles"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0118401/">Midsomer Murders</a></p>
-                <img src="/images/JohnNettles.jpg" alt="John Nettles">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Iain Glen</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0322513/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/7687-iain-glen"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Iain_Glen"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt6954652/">Jack Taylor</a></p>
-                <img src="/images/IainGlen.jpg" alt="Iain Glen">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Jensen Ackles</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0010075/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/54882-jensen-ackles"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Jensen_Ackles"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0460681/">Supernatural</a></p>
-                <img src="/images/JensenAckles.jpg" alt="Jensen Ackles">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>John Hannah</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0001314/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/57755-john-hannah"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/John_Hannah_(actor)"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0120616/">The Mummy</a>, <a href="https://www.imdb.com/title/tt0094525/">Poirot</a></p>
-                <img src="/images/JohnHannah.jpg" alt="John Hannah">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Tom Hardy</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0362766/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/2524-tom-hardy"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Tom_Hardy"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/find/?q=venom">Venom series</a>, <a href="https://www.imdb.com/title/tt21454134/">Bikeriders</a></p>
-                <img src="/images/TomHardy.jpg" alt="Tom Hardy">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Hayden Christensen</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0159789/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/17244-hayden-christensen"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Hayden_Christensen"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/find/?q=star%20wars">Starwars series</a>, <a href="https://www.imdb.com/title/tt0489099/">Jumper</a></p>
-                <img src="/images/HaydenChristensen.jpg" alt="Hayden Christensen">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Chris Evans</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0262635/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/16828-chris-evans"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Chris_Evans_(actor)"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0465580/">Push</a></p>
-                <img src="/images/ChrisEvans.jpg" alt="Chris Evans">
-            </div>
-        </section>
-        <section>
-            <div class="page">
-                <h2>Ryan Phillippe</h2>
-                <p>
-                    <a href="https://www.imdb.com/name/nm0000202/"><img src="/images/imdb.png" alt="IMDb"></a>
-                    <a href="https://www.themoviedb.org/person/11864-ryan-phillippe"><img src="/images/tmdb.png" alt="TMDB"></a>
-                    <a href="https://en.wikipedia.org/wiki/Ryan_Phillippe"><img src="/images/wikipedia.png" alt="Wikipedia"></a>
-                </p>
-                <h3>Favourites:</h3>
-                <p><a href="https://www.imdb.com/title/tt0139134/">Cruel Intentions</a></p>
-                <img src="/images/Ryan Phillippe.jpg" alt="Ryan Phillippe">
-            </div>
-        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 Megan Judge</p>
+        </footer>
     </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
