@@ -1,472 +1,144 @@
-/* Global Reset and Base Styles */
 * {
+    color: #FFFFFF;
+    scroll-snap-type: y mandatory;
     margin: 0;
     padding: 0;
+    font-size: calc(15px + 0.390625vw);
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* font-size/color live here, not on `*` — `*` directly matches every
-   element including nested inline ones (spans, links inside a paragraph),
-   and a direct match always wins over inheriting from a parent regardless
-   of specificity, which would silently override things like .detail-value
-   spans or link icons that expect to inherit their parent's size. Keeping
-   it on html/body lets it inherit down normally instead. */
-html, body {
-    height: 100dvh;
-    overflow: hidden;
-    background: rgb(50, 0, 50);
-    font-size: calc(16px + 0.390625vw);
-    color: rgb(220, 220, 220);
-}
-
-/* Only .app-content scrolls (locked header, independently-scrolling
-   content) — scrollbar styling lives there instead of html/body. */
-.app-content {
+html {
+    scroll-behavior: smooth;
+    background: rgb(25, 0, 51);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    scrollbar-color: rgb(147, 112, 219) rgb(25, 0, 51);
     scrollbar-width: thin;
-    scrollbar-color: rgb(255, 85, 85) rgb(50, 0, 50);
 }
 
-.app-content::-webkit-scrollbar {
+html::-webkit-scrollbar { /* Chromium */
     width: 10px;
 }
 
-.app-content::-webkit-scrollbar-track {
-    background: rgb(50, 0, 50);
+html::-webkit-scrollbar-track { /* Chromium */
+    background: rgb(25, 0, 51);
     box-shadow: inset 1px 1px 5px black;
 }
 
-.app-content::-webkit-scrollbar-thumb {
-    background: linear-gradient(0deg, rgb(255, 85, 85), rgb(200, 50, 50));
+html::-webkit-scrollbar-thumb { /* Chromium */
+    background: linear-gradient(0deg, rgb(147, 112, 219), rgb(75, 0, 130));
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+
+html::-webkit-scrollbar-thumb:hover { /* Chromium */
+    background: linear-gradient(0deg, rgb(160, 125, 232), rgb(90, 20, 150));
     border-radius: 10px;
 }
 
-.app-content::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(0deg, rgb(255, 100, 100), rgb(220, 60, 60));
+html::-webkit-scrollbar-thumb:active { /* Chromium */
+    background: linear-gradient(0deg, rgb(75, 0, 130), rgb(50, 0, 100));
+    border-radius: 10px;
 }
 
-.app-content::-webkit-scrollbar-thumb:active {
-    background: linear-gradient(0deg, rgb(200, 50, 50), rgb(180, 40, 40));
-}
-
-/* Fonts */
-@font-face {
-    font-family: 'FoxyScriptRegular';
-    src: url('fonts/FoxyScriptRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Visually hidden but still readable by screen readers */
-.sr-only {
-    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
-}
-
-/* App shell: locked header (sized to its own content) + independently
-   scrolling content area filling the rest of the viewport. */
-.app-shell {
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-}
-
-.app-header {
-    flex: 0 0 auto;
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 28px 20px 0;
-}
-
-.app-content {
-    flex: 1 1 auto;
-    min-height: 0;
-    overflow-y: auto;
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 20px 60px;
-}
-
-/* Intro */
-.intro {
-    text-align: center;
-    margin-bottom: 6px;
-}
-
-/* View tabs (Filters) */
-.view-tabs {
+section {
+    height: 100vh;
+    background: radial-gradient(circle, rgb(147, 112, 219) 0%, rgb(75, 0, 130) 100%);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin: 16px 0 32px;
-}
-
-.view-tab {
-    background: rgb(50, 0, 50);
-    border: 2px solid rgb(255, 85, 85);
-    border-radius: 8px;
-    padding: 8px 20px;
-    font-size: calc(13px + 0.35vw);
-    color: rgb(220, 220, 220);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.view-tab:hover {
-    background: rgb(80, 0, 80);
-}
-
-.view-tab.active,
-.view-tab[aria-expanded="true"] {
-    background: rgb(255, 85, 85);
-    color: rgb(30, 4, 10);
-    text-shadow: none;
-}
-
-h1 {
-    font-size: 3.5rem;
-    font-family: 'FoxyScriptRegular', cursive, sans-serif;
-    line-height: 1.3;
-    color: rgb(255, 147, 41);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    white-space: nowrap;
-}
-
-/* Filter bar — collapsible panel toggled by the Filters tab; [hidden]
-   handles the display:none natively, no extra rule needed. */
-.filter-bar {
-    padding: 16px 0 4px;
-    border-top: 1px solid rgba(255, 85, 85, 0.3);
-}
-
-.dropdown-container {
-    margin-bottom: 15px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-#genreDropdown,
-#countryDropdown,
-#yearDropdown {
-    background: rgb(50, 0, 50);
-    border: 2px solid rgb(255, 85, 85);
-    border-radius: 8px;
-    padding: 8px 12px;
-    font-size: calc(14px + 0.390625vw);
-    color: rgb(220, 220, 220);
-    width: 240px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(255, 85, 85)' viewBox='0 0 20 20'%3e%3cpath d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 16px;
-    padding-right: 32px;
-}
-
-#genreDropdown:hover,
-#countryDropdown:hover,
-#yearDropdown:hover {
-    background-color: rgb(80, 0, 80);
-}
-
-#genreDropdown:focus,
-#countryDropdown:focus,
-#yearDropdown:focus {
-    outline: none;
-    box-shadow: 0 0 8px rgba(255, 85, 85, 0.5);
-}
-
-#genreDropdown option,
-#countryDropdown option,
-#yearDropdown option {
-    background: rgb(50, 0, 50);
-    color: rgb(220, 220, 220);
-}
-
-.description {
-    max-width: 760px;
-    margin: 0 auto;
-    text-align: left;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.description p {
-    font-size: calc(13px + 0.390625vw);
-    line-height: 1.4;
-    margin: 0;
-}
-
-.description p a {
-    margin: 0 2px;
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 1.2em;
-    height: 1.2em;
-    line-height: 1.2em;
-    font-size: 1em;
-    vertical-align: middle;
-    transition: all 0.2s ease;
+    text-align: center;
+    line-height: 3;
+    scroll-snap-align: start;
+    overflow: hidden;
 }
 
-.description p a img {
-    width: 1.2em;
-    height: 1.2em;
-    display: block;
+.page {
+    width: 80%;
 }
 
-.description p a:hover {
-    filter: brightness(1.2);
-    transform: scale(1.1);
+section > .page > img {
+    border: none;
+    margin-top: 25px;
+    width: 350px;
+    height: 200px;
+    border-radius: 5px 5px 50px 50px;
+    border: 2px solid rgb(147, 112, 219);
+    background: rgb(25, 0, 51);
+    box-shadow: 
+        0 4px 8px rgba(147, 112, 219, 0.5),
+        0 0 15px rgba(147, 112, 219, 0.3);
+    transition: transform 0.3s ease;
+}
+
+section > .page > img:hover {
+    transform: scale(1.05);
+}
+
+section p img {
+    width: 48px;
+    height: 48px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    border: none;
 }
 
 a {
-    color: rgb(255, 147, 41);
+    color: rgb(255, 215, 0);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgb(255, 100, 100);
-}
-
-/* Empty state */
-.empty-state {
-    text-align: center;
-    padding: 40px 0;
-    color: rgb(220, 190, 205);
-    font-size: calc(14px + 0.390625vw);
-}
-
-/* Series grid — fixed 6 columns, card width comes from --card-w (set by
-   script.js to whichever is smaller: width-for-6-columns or
-   height-for-3-rows), so a full 6x3 screenful fits without scrolling on
-   desktop. Falls back to a fixed 170px if JS hasn't run yet (first paint). */
-.grid-section {
-    margin-bottom: 20px;
-}
-
-.series-grid {
-    display: grid;
-    grid-template-columns: repeat(6, var(--card-w, 170px));
-    justify-content: center;
-    gap: 18px;
-}
-
-.series-card {
-    aspect-ratio: 2 / 3;
-    perspective: 1200px;
+    color: rgb(218, 165, 32);
     cursor: pointer;
-    border-radius: 15px;
-    outline: none;
-    /* Only the on-screen cards get laid out/painted at a time instead of
-       all of them — avoids lag from dozens of 3D-transform cards being
-       measured/painted at once. contain-intrinsic-size gives the browser a
-       size estimate for off-screen cards before it's measured them. */
-    content-visibility: auto;
-    contain-intrinsic-size: 170px 255px;
 }
 
-.series-card:focus-visible .series-card-inner {
-    box-shadow: 0 0 0 3px rgb(255, 147, 41), 0 4px 8px rgba(255, 85, 85, 0.5);
+h1 {
+    color: rgb(200, 162, 200);
+    font-size: 4rem;
+    font-family: 'GarudaFight', fantasy !important; /* Force GarudaFight */
+    line-height: 1.5;
+    text-shadow: 2px 2px 5px black, 0 0 10px rgb(200, 162, 200);
 }
 
-.series-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transform-style: preserve-3d;
-    border-radius: 15px;
-    box-shadow:
-        0 4px 8px rgba(255, 85, 85, 0.5),
-        0 0 15px rgba(255, 85, 85, 0.3);
+h2 {
+    color: rgb(200, 162, 200);
+    font-family: 'GarudaFight', fantasy !important; /* Force GarudaFight */
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px black, 0 0 10px rgb(200, 162, 200);
+    font-size: calc(76px + 0.390625vw);
+    line-height: 1.5;
 }
 
-.series-card.is-flipped .series-card-inner {
-    transform: rotateY(180deg);
+@font-face {
+    font-family: 'GarudaFight';
+    src: url('font/GarudaFight.otf') format('opentype'),
+         url('font/garudafight.otf') format('opentype'), /* Fallback for case sensitivity */
+         url('fonts/GarudaFight.otf') format('opentype'), /* Fallback for common folder name */
+         url('fonts/garudafight.otf') format('opentype'); /* Fallback for case and folder */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Improve loading behavior */
 }
 
-.series-card-face {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 2px solid rgb(255, 85, 85);
-    background: rgb(50, 0, 50);
-}
-
-.series-card-front {
-    display: flex;
-    position: relative;
-}
-
-.series-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Front is a clean poster — no title/flag overlay, just this flip
-   affordance in the corner (title lives on the back, where there's room). */
-.series-card-flip-hint {
-    position: absolute;
-    right: 6px;
-    bottom: 6px;
-    width: 1.3em;
-    height: 1.3em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 0.25vw);
-    line-height: 1;
-    color: rgba(255, 230, 220, 0.6);
-    background: rgba(20, 0, 20, 0.4);
-    border: 1px solid rgba(255, 230, 220, 0.3);
-    border-radius: 50%;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    pointer-events: none;
-}
-
-.series-card-back {
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    padding: 14px;
-    background: radial-gradient(circle at top, rgb(95, 20, 95) 0%, rgb(50, 0, 50) 100%);
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgb(255, 85, 85) rgb(50, 0, 50);
-}
-
-.series-card-back h3 {
-    font-family: 'FoxyScriptRegular', cursive, sans-serif;
-    font-size: calc(18px + 0.5vw);
-    line-height: 1.15;
-    color: rgb(255, 147, 41);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    margin-bottom: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px;
-}
-
-.series-card-back h3 .flag {
-    font-size: 0.75em;
-}
-
-.series-card-details {
-    flex: 1 0 auto;
-    margin-top: 2px;
-}
-
-.series-card-details p {
-    font-size: calc(10.5px + 0.35vw);
-    line-height: 1.35;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.detail-value {
-    font-size: inherit;
-    font-style: italic;
-}
-
-.series-card-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    margin-top: 10px;
-    padding-top: 8px;
-    border-top: 1px solid rgba(255, 85, 85, 0.3);
-}
-
-.series-card-links img {
-    width: 26px;
-    height: 26px;
-}
-
-.series-card.hidden {
-    display: none;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    margin-top: 32px;
-}
-
-.footer p {
-    font-size: calc(11px + 0.3vw);
-    color: rgb(210, 190, 205);
-    line-height: 1.4;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-/* Responsive Design */
-@media (max-width: 1000px) {
-    .series-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .app-header {
-        padding: 20px 14px 0;
-    }
-
-    .app-content {
-        padding: 16px 14px 44px;
-    }
-
+@media (max-width: 600px) {
     h1 {
-        font-size: clamp(1.5rem, 7vw, 2.5rem);
-        white-space: normal;
+        font-size: 2.5rem;
     }
-
-    .series-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
+    h2 {
+        font-size: calc(60px + 0.390625vw);
     }
-
-    .series-card-back h3 {
-        font-size: calc(14px + 0.45vw);
+    section > .page > img {
+        width: 280px;
+        height: 160px;
     }
-
-    .series-card-details p {
-        font-size: calc(9.5px + 0.35vw);
-    }
-
-    .series-card-links img {
-        width: 22px;
-        height: 22px;
-    }
-
-    #genreDropdown,
-    #countryDropdown,
-    #yearDropdown {
-        width: 100%;
-        max-width: 180px;
-        font-size: calc(12px + 0.390625vw);
-    }
-}
-
-@media (max-width: 480px) {
-    .series-grid {
-        grid-template-columns: repeat(2, 1fr);
+    section p img {
+        width: 40px;
+        height: 40px;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 15px;
     }
 }
