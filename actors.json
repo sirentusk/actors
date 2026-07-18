@@ -259,7 +259,7 @@
   },
   {
     "name": "Michelle Rodriguez",
-    "photo": null,
+    "photo": "MichelleRodriguez",
     "initials": "MR",
     "imdb": "https://www.imdb.com/name/nm0735442/",
     "tmdb": "https://www.themoviedb.org/person/5527-michelle-rodriguez",
@@ -350,7 +350,7 @@
   },
   {
     "name": "Richard Roxburgh",
-    "photo": null,
+    "photo": "RichardRoxburgh",
     "initials": "RR",
     "imdb": "https://www.imdb.com/name/nm0746896/",
     "tmdb": "https://www.themoviedb.org/person/7908-richard-roxburgh",
@@ -403,7 +403,7 @@
   },
   {
     "name": "Ian McShane",
-    "photo": null,
+    "photo": "IanMcShane",
     "initials": "IM",
     "imdb": "https://www.imdb.com/name/nm0574534/",
     "tmdb": "https://www.themoviedb.org/person/16577-ian-mcshane",
@@ -490,7 +490,7 @@
   },
   {
     "name": "Vincent D'Onofrio",
-    "photo": null,
+    "photo": "VincentDOnofrio",
     "initials": "VO",
     "imdb": "https://www.imdb.com/name/nm0000352/",
     "tmdb": "https://www.themoviedb.org/person/5293-vincent-d-onofrio",
@@ -626,7 +626,7 @@
   },
   {
     "name": "Tom Hardy",
-    "photo": null,
+    "photo": "TomHardy",
     "initials": "TH",
     "imdb": "https://www.imdb.com/name/nm0362766/",
     "tmdb": "https://www.themoviedb.org/person/2524-tom-hardy",
