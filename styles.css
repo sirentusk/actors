@@ -349,5 +349,7 @@ a:focus-visible, .node:focus-visible, .icon-link:focus-visible, .close-btn:focus
 
 @media (max-width: 480px){
   .medallion h1{ font-size: clamp(1.15rem, 6.2vmin, 1.7rem); }
+  .medallion .eyebrow{ font-size: .5rem; }
+  .medallion .stat{ font-size: .54rem; }
   .credit{ display: none; }
 }
