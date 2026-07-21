@@ -205,8 +205,8 @@ a:focus-visible, .node:focus-visible, .icon-link:focus-visible, .close-btn:focus
   letter-spacing: .24em;
   text-transform: uppercase;
   color: var(--starlight-dim);
-  pointer-events: none;
 }
+.credit:hover, .credit:focus-visible{ color: var(--gold); }
 
 .overlay{
   position: fixed;
