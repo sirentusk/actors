@@ -115,6 +115,9 @@ a:focus-visible, .node:focus-visible, .icon-link:focus-visible, .close-btn:focus
   transform: translate(-50%, -50%);
   animation: drift var(--dur, 8s) ease-in-out var(--delay, 0s) infinite;
 }
+.node-wrap:hover, .node-wrap:focus-within{
+  z-index: 9999;
+}
 @keyframes drift{
   0%, 100%{ translate: 0 0; }
   50%{ translate: var(--dx, 4px) var(--dy, -4px); }
