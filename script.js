@@ -114,7 +114,7 @@
     var radius = R0 + C * Math.sqrt(i);
     var x = 50 + radius * Math.cos(angle);
     var y = 50 + radius * Math.sin(angle);
-    var size = 98 - (idx / Math.max(1, n - 1)) * 40;
+    var size = (98 - (idx / Math.max(1, n - 1)) * 40) / 9.8;
     points.push({ actor: actor, x: x, y: y, size: size, idx: idx });
   });
 
@@ -210,8 +210,8 @@
     wrap.className = 'node-wrap';
     wrap.style.left = p.x + '%';
     wrap.style.top = p.y + '%';
-    wrap.style.width = p.size + 'px';
-    wrap.style.height = p.size + 'px';
+    wrap.style.width = p.size + '%';
+    wrap.style.height = p.size + '%';
 
     if (!reduceMotion){
       var angle = Math.random() * Math.PI * 2;
